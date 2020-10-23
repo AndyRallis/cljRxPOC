@@ -1,0 +1,108 @@
+; This is the Calva evaluation results output window.
+; Leave it open, please. Because quirks.
+; TIPS: The keyboard shortcut `ctrl+alt+c o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS: 
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - File URLs in stacktrace frames are peekable and clickable.
+clj::rx-api.core=> (take 4 (cut-down-list (csv-data->maps (read-in-drug-list)) [:prodnme :ndcnum]))
+; Jack-in done.
+({:prodnme "SEPRAFILM", :ndcnum "00000430102"}
+ {:prodnme "SEPRAFILM", :ndcnum "00000508602"}
+ {:prodnme "SEPRAFILM", :ndcnum "00000638001"}
+ {:prodnme "SEPRAFILM", :ndcnum "00000664101"})
+clj::rx-api.core=> (first (csv-data->maps (read-in-drug-list)))
+{:roads "Route Not Applicable",
+ :thercls "234",
+ :genind "1",
+ :prdctds "Rx-only/Trade or Brand Name",
+ :strngth "",
+ :orgbkfg "N",
+ :prodcat "1",
+ :ndcnum "00000430102",
+ :excldrg "00",
+ :therdtl "9207000019",
+ :deaclds "All other Rx",
+ :deaclas "6",
+ :reactdt "",
+ :metsize "EA 00010",
+ :manfnme "GENZYME CORPORATION",
+ :maintin "3",
+ :thrclds "Misc Therapeutic Agents, NEC",
+ :mastfrm "SHE",
+ :excdgds "",
+ :roacd "NA",
+ :orgbkds "Not Rated",
+ :actind "Y",
+ :desidrg "N",
+ :gennme "Carboxymethylcellulose/Hyaluronate Sodium",
+ :generid "124693",
+ :thrgrds "Misc Therapeutic Agents",
+ :pkqtycd "EA",
+ :thergrp "29",
+ :maintds "Primarily acute",
+ :thrdtds "Sodium Hyaluronate & Deriv.",
+ :mstfmds "Sheet",
+ :siglsrc "Y",
+ :gnindds "Single source brand",
+ :orgbkcd "NR",
+ :prodnme "SEPRAFILM",
+ :pksize "10",
+ :deactdt ""}
+clj::rx-api.core=> 
+(take 4 (cut-down-list (csv-data->maps (read-in-drug-list)) keys-needed))
+; Syntax error compiling at (c:\Users\A0683663\Desktop\Reference\Redwood Priorities\Rx Lookup Mockup\rx-api\.calva\output-window\output.repl:63:9).
+; Unable to resolve symbol: keys-needed in this context
+[{:file "Compiler.java" :line 6808 :method "analyze" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6745 :method "analyze" :flags [:dup :tooling :java]}
+ {:file "Compiler.java" :line 3888 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7109 :method "analyzeSeq" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6789 :method "analyze" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6745 :method "analyze" :flags [:dup :tooling :java]}
+ {:file "Compiler.java" :line 3888 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7109 :method "analyzeSeq" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6789 :method "analyze" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6745 :method "analyze" :flags [:dup :tooling :java]}
+ {:file "Compiler.java" :line 6120 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 5467 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 4029 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7105 :method "analyzeSeq" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6789 :method "analyze" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7174 :method "eval" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7132 :method "eval" :flags [:dup :tooling :java]}
+ {:file "jar:file:/C:/Users/A0683663/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/core.clj:3214" :fn "eval"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/C:/Users/A0683663/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/core.clj:3210" :fn "eval"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/C:/Users/A0683663/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/main.clj:437" :fn "repl/read-eval-print/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/C:/Users/A0683663/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/main.clj:437" :fn "repl/read-eval-print"  :method "invoke" :flags [:dup :clj]}
+ {:file "jar:file:/C:/Users/A0683663/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/main.clj:458" :fn "repl/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/C:/Users/A0683663/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/main.clj:458" :fn "repl"  :method "invokeStatic" :flags [:dup :clj]}
+ {:file "jar:file:/C:/Users/A0683663/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar!/clojure/main.clj:368" :fn "repl"  :method "doInvoke" :flags [:clj]}
+ {:file "RestFn.java" :line 1523 :method "invoke" :flags [:java]}
+ {:file "jar:file:/C:/Users/A0683663/.m2/repository/nrepl/nrepl/0.6.0/nrepl-0.6.0.jar!/nrepl/middleware/interruptible_eval.clj:79" :fn "evaluate"  :method "invokeStatic" :flags [:tooling :clj]}
+ {:file "jar:file:/C:/Users/A0683663/.m2/repository/nrepl/nrepl/0.6.0/nrepl-0.6.0.jar!/nrepl/middleware/interruptible_eval.clj:55" :fn "evaluate"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/C:/Users/A0683663/.m2/repository/nrepl/nrepl/0.6.0/nrepl-0.6.0.jar!/nrepl/middleware/interruptible_eval.clj:142" :fn "interruptible-eval/fn/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "jar:file:/C:/Users/A0683663/.m2/repository/nrepl/nrepl/0.6.0/nrepl-0.6.0.jar!/nrepl/middleware/session.clj:171" :fn "session-exec/main-loop/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/C:/Users/A0683663/.m2/repository/nrepl/nrepl/0.6.0/nrepl-0.6.0.jar!/nrepl/middleware/session.clj:170" :fn "session-exec/main-loop"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "Thread.java" :line 748 :method "run" :flags [:java]}]
+clj::rx-api.core=> 
+#'rx-api.core/keys-needed
+clj::rx-api.core=> 
+(take 4 (cut-down-list (csv-data->maps (read-in-drug-list)) keys-needed))
+({:prodnme "SEPRAFILM", :ndcnum "00000430102", :strngth "", :pksize "10", :mstfmds "Sheet"}
+ {:prodnme "SEPRAFILM", :ndcnum "00000508602", :strngth "", :pksize "30", :mstfmds "Sheet"}
+ {:prodnme "SEPRAFILM", :ndcnum "00000638001", :strngth "", :pksize "40", :mstfmds "Sheet"}
+ {:prodnme "SEPRAFILM", :ndcnum "00000664101", :strngth "", :pksize "5", :mstfmds "Sheet"})
+clj::rx-api.core=> 
+; nREPL Connection was closed
