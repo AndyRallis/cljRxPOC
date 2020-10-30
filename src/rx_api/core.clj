@@ -1,5 +1,5 @@
 (ns rx-api.core
- (:require [rx-api/rx-load :as rx-load]))
+ (:require [rx-api.rx-load :as rx-load]))
 
 (def keys-needed [:prodnme :ndcnum :strngth :pksize :mstfmds])
 
