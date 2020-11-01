@@ -10,6 +10,7 @@
                  [compojure "1.6.2"]
                  [environ "1.2.0"]]
   :main ^:skip-aot rx-api.core
+  :min-lein-version "2.0.0"
   :target-path "target/%s"
   :uberjar-name "cljRxLookupPOC.jar"
   :profiles {:uberjar {:aot :all}})
