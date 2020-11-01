@@ -1,1 +1,1 @@
-web: java $JVM_OPTS -cp target/cljRxLookupPOC.jar clojure.main -m rx-api.core
+web: java $JVM_OPTS -cp target/uberjar/cljRxLookupPOC.jar clojure.main -m rx-api.core
